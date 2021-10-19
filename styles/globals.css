@@ -1,0 +1,165 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.test{
+  background-color: aqua;
+}
+
+
+/**************************NavBar*******************************/
+.nav-header{
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+}
+
+.nav-logo{
+  font-size: 30px;
+  font-weight: 500;
+  color: #482ff7;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-menu {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+.nav-link{
+  font-size: 17px;
+  font-weight: 400;
+  color: black;
+  list-style: none;
+  text-decoration: none;
+
+}
+
+.nav-link{
+  margin-left: 40px;
+}
+
+/****************************Macbook Pro Full Screen**********************/
+
+@media only screen and (max-width: 1600px) {
+  /**********************Product Card*********************/
+  .box{
+    width: 25%;
+    height: auto;
+  }
+
+  .products-container {
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .card{
+    max-width: 100%;
+    padding: 1px;
+    height: 600px;
+  }
+
+  .card-image{
+    max-width: 100%;
+    height: 519px;
+  }
+
+  .info-container{
+    display: flex;
+  }
+
+  .left-container{
+    width: 85%;
+  }
+
+  .card-info{
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 15px;
+    color: #313131;
+  }
+
+  /**********************Category Page********************/
+  .category-page {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .spinBar{
+    height: 50px;
+    background-color: #e2e2e2;
+    color: #e2e2e2;
+
+}
+
+  .tops-title{
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+    color: #313131;
+    font-family: 'Century Gothic', Geneva, Verdana, sans-serif;
+    padding-top: 18px;
+    padding-bottom: 25px;
+}
+  .subcategories{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 18px;
+  }
+
+  .sC-item{
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #313131;
+  }
+
+  .sc-item{
+    padding-left: 50px;
+  }
+
+  .filter-tab {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 30px;
+  }
+
+  .filter-button {
+    display: flex;
+    justify-content: center;
+    outline: 0.5px solid #2e2e2e;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+}
+
+/****************************Laptops**********************/
+
+@media only screen and (max-width: 1024px) {
+
+}
