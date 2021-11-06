@@ -156,6 +156,90 @@ li {
     padding-right: 40px;
   }
 
+  /*************************Cart Page*********************/
+
+  .shopping-cart{
+    width: 95%;
+    height: 200px;
+    margin: 60px auto;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cart-item {
+    padding: 20px 30px;
+    height: 120px;
+    display: flex;
+  }
+  
+  .cart-image {
+    margin-right: 30px;
+    max-width: 200px;
+    max-height: 150px;
+  }
+  
+  .cart-description {
+    padding-top: 30px;
+    margin-right: 30px;
+    width: 115px;
+  }
+  
+  /*.cart-description span {
+    display: block;
+    font-size: 14px;
+    color: #43484D;
+    font-weight: 400;
+  }*/
+  
+  .cart-description-name {
+    display: block;
+    font-size: 14px;
+    color: #43484D;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+
+  .cart-description-size {
+    display: block;
+    font-size: 14px;
+    color: #43484D;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  
+  .cart-description-color {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    font-weight: 300;
+    margin-top: 8px;
+    color: #86939E
+  }
+  
+  .cart-quantity {
+    padding-top: 43px;
+    margin-right: 30px;
+  }
+
+  .plus-btn {
+
+  }
+
+  .item-number{
+    padding-left: 7px;
+  }
+
+  .minus-btn {
+
+  }
+
+  .item-price {
+    margin-top: 65px;
+  }
+
 }
 
 /****************************Laptops**********************/

@@ -57,7 +57,7 @@ const data = {
             slug: 'top-5',
             category: 'tops',
             image: '/images/top1.png',
-            price: '£25',
+            price: '25',
             description: 'T-shirt',
             sizes: ['s','m','l'],
                 },

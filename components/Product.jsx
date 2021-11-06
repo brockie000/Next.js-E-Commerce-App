@@ -22,7 +22,7 @@ const Product = ({product, addToCart}) => {
                         </div>
 
                         <div className='card-info'>
-                            {product.price}
+                            £{product.price}
                         </div>
                     </div>
                 

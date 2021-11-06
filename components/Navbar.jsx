@@ -44,11 +44,13 @@ const Navbar = ({totalItems, cart}) => {
                         <a href='/categories/sale' className='nav-link'>Sale</a>
                     </li>
                     
+                    <a href='/Cart/cart'>
                     <IconButton aria-label='Show cart items' color='inherit'>
                         <Badge badgeContent={cartCount} color='secondary'>
                             <ShoppingCart/>
                         </Badge>
                     </IconButton>
+                    </a>
                     
                     
                 </ul>

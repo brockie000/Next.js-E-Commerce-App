@@ -19,12 +19,12 @@ export default function Home() {
       </div>
       </NextLink>
       <div className='products-container'>
-      {data.products.map((product) => (
-        <NextLink href={`/product/${product.slug}`} passHref>
+        {data.products.map((product) => (
+            <NextLink href={`/product/${product.slug}`} passHref>
               <div className='box' item key={product.name} xs={12} sm={6} md={4} lg={3}>
-                <img className='card-image' src={product.image} />
-                <div>{product.name}</div>
-            </div>
+                  <img className='card-image' src={product.image} />
+                  <div>{product.name}</div>
+              </div>
             </NextLink>
             ))}
       </div>
