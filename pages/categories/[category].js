@@ -10,9 +10,7 @@ import Product from '../../components/Product';
 export default function Tops() {
     const router = useRouter();
     const { category } = router.query;
-    console.log(category)
-    let items = data.products.filter(product => product.category === category)
-    //console.log(items)
+    let items = data.products.filter(product => product.category === category || product.sub.includes(category))
 
     const ColoredLine = ({color}) => (
         <hr
@@ -33,7 +31,7 @@ export default function Tops() {
             <div className='writing'>WorldWide Shipping</div>
             </div>
 
-        <div className='tops-title'>WOMENS {category}</div>
+        <div className='tops-title'>WOMENS {category.toUpperCase()}</div>
 
         <SubCategories category={category}/>
 

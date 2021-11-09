@@ -1,6 +1,7 @@
 import { IconButton } from '@material-ui/core'
 import { AddShoppingCart } from '@material-ui/icons'
 import React from 'react'
+import NextLink from 'next/link';
 import { connect } from 'react-redux';
 import { addToCart } from '../redux/Shopping/shopping-actions';
 
@@ -8,11 +9,13 @@ const Product = ({product, addToCart}) => {
 
     return (
         <div>
+            
             <div className='card'>
-                
+                <NextLink href={`/product/${product.slug}`} passHref>
                 <a href={`/product/${product.slug}`} passHref>
                 <img className='card-image' src={product.image} />
                 </a>
+                </NextLink>
                 
                 <div className='info-container'>
                     

@@ -55,16 +55,48 @@ li {
   color: black;
   list-style: none;
   text-decoration: none;
-
-}
-
-.nav-link{
   margin-left: 40px;
+
 }
 
 /****************************Macbook Pro Full Screen**********************/
 
 @media only screen and (max-width: 1600px) {
+  /**********************Landing Page*********************/
+  .landingContainer{
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .landingPageBox{
+    width: 33%;
+    margin-bottom: -38px;
+  }
+
+  .landingPageImage{
+    width: 100%;
+  }
+  .landingBoxText{
+    position: relative;
+    bottom: 50%;
+    text-align: center;
+    font-size: 30px;
+    color: gray;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .newArrivalsContainer{
+
+  }
+
+  .newArrivalsText{
+    margin: 50px;
+    font-size: 25px;
+    text-align: center;
+  }
+
   /**********************Product Card*********************/
   .box{
     width: 25%;

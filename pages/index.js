@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-key */
 /* eslint-disable jsx-a11y/alt-text */
@@ -13,21 +14,71 @@ export default function Home() {
   return (
     <main className='LandingPage'>
       <Navbar/>
-      <NextLink href="/login">
-      <div>
-        Product
+  
+      <div className='landingContainer'>
+
+        <NextLink href={`/categories/tops`}>
+        <div className='landingPageBox'>
+            <a href='/'>
+              <img className='landingPageImage' src='images/top1.png'/>
+            </a>
+            <div className='landingBoxText'>New Arrivals</div>
+         </div>
+         </NextLink>
+
+         <NextLink href={`/categories/tops`}>
+        <div className='landingPageBox'>
+            <a href='/'>
+              <img className='landingPageImage' src='images/top1.png'/>
+            </a>
+            <div className='landingBoxText'>Tops</div>
+         </div>
+         </NextLink>
+
+         <NextLink href={`/categories/tops`}>
+        <div className='landingPageBox'>
+            <a href='/'>
+              <img className='landingPageImage' src='images/top1.png'/>
+            </a>
+            <div className='landingBoxText'>Jumpers</div>
+         </div>
+         </NextLink>
+
+         <NextLink href={`/categories/tops`}>
+        <div className='landingPageBox'>
+            <a href='/'>
+              <img className='landingPageImage' src='images/top1.png'/>
+            </a>
+            <div className='landingBoxText'>Dresses</div>
+         </div>
+         </NextLink>
+
+         <NextLink href={`/categories/tops`}>
+        <div className='landingPageBox'>
+            <a href='/'>
+              <img className='landingPageImage' src='images/top1.png'/>
+            </a>
+            <div className='landingBoxText'>Bottoms</div>
+         </div>
+         </NextLink>
+
+         <NextLink href={`/categories/tops`}>
+        <div className='landingPageBox'>
+            <a href='/'>
+              <img className='landingPageImage' src='images/top1.png'/>
+            </a>
+            <div className='landingBoxText'>Accessories</div>
+         </div>
+         </NextLink>
+
       </div>
-      </NextLink>
-      <div className='products-container'>
-        {data.products.map((product) => (
-            <NextLink href={`/product/${product.slug}`} passHref>
-              <div className='box' item key={product.name} xs={12} sm={6} md={4} lg={3}>
-                  <img className='card-image' src={product.image} />
-                  <div>{product.name}</div>
-              </div>
-            </NextLink>
-            ))}
+
+      <div className = 'newArrivalsContainer'>
+        <div className = 'newArrivalsText'>
+          New Arrivals
+        </div>
       </div>
+
 
       
     </main>
