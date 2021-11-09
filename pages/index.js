@@ -14,6 +14,10 @@ export default function Home() {
   return (
     <main className='LandingPage'>
       <Navbar/>
+
+        <div className='spinBar'>
+            <div className='writing'>WorldWide Shipping</div>
+            </div>
   
       <div className='landingContainer'>
 

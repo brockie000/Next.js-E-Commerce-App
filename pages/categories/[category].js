@@ -31,7 +31,7 @@ export default function Tops() {
             <div className='writing'>WorldWide Shipping</div>
             </div>
 
-        <div className='tops-title'>WOMENS {category.toUpperCase()}</div>
+        <div className='tops-title'>WOMENS {category}</div>
 
         <SubCategories category={category}/>
 
