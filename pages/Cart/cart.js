@@ -2,7 +2,7 @@ import { Container, Typography } from '@material-ui/core';
 import React, {useState, useEffect} from 'react'
 import { connect } from 'react-redux';
 import Navbar from '../../components/Navbar';
-import CartItem from './cartItem';
+import CartItem from '../../components/cartItem';
 
 const Cart = ({cart}) => {
     

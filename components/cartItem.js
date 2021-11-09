@@ -1,7 +1,8 @@
 import React from 'react'
 
 const CartItem = ({items}) => {
-    console.log('test', items.name)
+    
+    try{
     return (
         <div className='shopping-cart'>
             <div className='cart-item'>
@@ -21,16 +22,18 @@ const CartItem = ({items}) => {
                 </div>
 
                 <div className='cart-quantity'>
-                    <button className='plus-btn' type='button' name='button' onClick={() => handleUpdateCartQty(item.id, item.quantity + 1)}>+</button>
+                    <button className='plus-btn' type='button' >+</button>
                     <div className='item-number'>{items.qty}</div>
-                    <button className='minus-btn' type='button' name='button'onClick={() => handleUpdateCartQty(item.id, item.quantity - 1)}>-</button>
+                    <button className='minus-btn' type='button' >-</button>
                 </div>
 
                 <div className='item-price'>£{items.price}</div>
 
             </div>
         </div>
-    )
+    )} catch(e){
+        console.log('error')
+    }
 }
 
 export default CartItem;
