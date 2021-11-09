@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react'
 import { connect } from 'react-redux';
 import Navbar from '../../components/Navbar';
 import CartItem from '../../components/cartItem';
+import { removeFromCart } from '../../redux/Shopping/shopping-actions';
 
 const Cart = ({cart}) => {
     
@@ -17,9 +18,15 @@ const Cart = ({cart}) => {
         setCartCount(count);
     }, [cart, cartCount]);
 
+    const RemoveCart = () => {
+        cart: []
+    }
+
     const EmptyCart = () => (
         <Typography variant='subtitle1'>Cart is Empty</Typography>
     ) 
+
+    var id = 2;
     
     const FilledCart = () => (
     
@@ -27,11 +34,15 @@ const Cart = ({cart}) => {
             <Navbar/>
             <div className='products-container' spacing={0}>
                 {cart.map((items) => (
-                <div /*className='box'*/ item key={items.name} xs={12} sm={6} md={4} lg={3}>
+                <div item key={items.name} xs={12} sm={6} md={4} lg={3}>
                     <CartItem items={items}/>
                 </div>))}
             </div>
-            <div>{cartCount}</div>
+            
+            <div>
+                {cartCount}
+                <button>Empty Cart</button>
+            </div>
         </main>)
 
     if(cartCount == 0) 
@@ -43,6 +54,8 @@ const Cart = ({cart}) => {
                 <FilledCart/>
             )
 }
+
+
 
 
 const mapStateToProps = state => {

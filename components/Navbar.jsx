@@ -24,7 +24,7 @@ const Navbar = ({totalItems, cart}) => {
             <div className="navbar">
             
             <NextLink href={`/`} passHref>
-            <a href='/'>Kai Commerce</a>
+            <a href='/'>Kais Commerce</a>
             </NextLink>
             
                 <ul className='nav-menu'>

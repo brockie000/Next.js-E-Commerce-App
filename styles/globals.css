@@ -23,6 +23,7 @@ a {
 /**************************NavBar*******************************/
 .nav-header{
   border-bottom: 1px solid #FFFFFF;
+  max-width: 100%;
 }
 
 .navbar {
@@ -30,6 +31,8 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 0px 15px;
+  max-width: 100%;
+  max-height: 60px;
 }
 
 .nav-logo{
@@ -67,7 +70,8 @@ li {
     display: inline-flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    
+
   }
 
   .landingPageBox{
@@ -152,6 +156,8 @@ li {
   .tops-title{
     display: flex;
     justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
     font-size: 17px;
     color: #313131;
     font-family: 'Century Gothic', Geneva, Verdana, sans-serif;
@@ -160,6 +166,7 @@ li {
 }
   .subcategories{
     display: flex;
+    text-align: center;
     justify-content: center;
     padding-bottom: 18px;
   }

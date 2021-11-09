@@ -14,14 +14,10 @@ export default function Home() {
   return (
     <main className='LandingPage'>
       <Navbar/>
-
-        <div className='spinBar'>
-            <div className='writing'>WorldWide Shipping</div>
-            </div>
   
       <div className='landingContainer'>
 
-        <NextLink href={`/categories/tops`}>
+        <NextLink href={`/categories/new`}>
         <div className='landingPageBox'>
             <a href='/'>
               <img className='landingPageImage' src='images/top1.png'/>
@@ -39,7 +35,7 @@ export default function Home() {
          </div>
          </NextLink>
 
-         <NextLink href={`/categories/tops`}>
+         <NextLink href={`/categories/jumpers`}>
         <div className='landingPageBox'>
             <a href='/'>
               <img className='landingPageImage' src='images/top1.png'/>
@@ -48,7 +44,7 @@ export default function Home() {
          </div>
          </NextLink>
 
-         <NextLink href={`/categories/tops`}>
+         <NextLink href={`/categories/dresses`}>
         <div className='landingPageBox'>
             <a href='/'>
               <img className='landingPageImage' src='images/top1.png'/>
@@ -57,7 +53,7 @@ export default function Home() {
          </div>
          </NextLink>
 
-         <NextLink href={`/categories/tops`}>
+         <NextLink href={`/categories/bottoms`}>
         <div className='landingPageBox'>
             <a href='/'>
               <img className='landingPageImage' src='images/top1.png'/>
@@ -66,7 +62,7 @@ export default function Home() {
          </div>
          </NextLink>
 
-         <NextLink href={`/categories/tops`}>
+         <NextLink href={`/categories/accessories`}>
         <div className='landingPageBox'>
             <a href='/'>
               <img className='landingPageImage' src='images/top1.png'/>
