@@ -3,11 +3,17 @@ import React, {useState, useEffect} from 'react'
 import { connect } from 'react-redux';
 import Navbar from '../../components/Navbar';
 import CartItem from '../../components/cartItem';
-import { removeFromCart } from '../../redux/Shopping/shopping-actions';
+import EmptyCartButton from '../../components/EmptyCartButton';
+import { addToCart, clearCart, removeFromCart } from '../../redux/Shopping/shopping-actions';
 
 const Cart = ({cart}) => {
     
     const [cartCount, setCartCount] = useState(0);
+
+    const EmptyButton = () =>{
+        localStorage.removeItem('state')
+        window.location.replace('/')
+    }
 
     useEffect(() => {
         let count = 0;
@@ -41,7 +47,7 @@ const Cart = ({cart}) => {
             
             <div>
                 {cartCount}
-                <button>Empty Cart</button>
+                <button onClick={EmptyButton}>Empty Cart</button>
             </div>
         </main>)
 
@@ -55,7 +61,11 @@ const Cart = ({cart}) => {
             )
 }
 
-
+const mapDispatchToProps = (dispatch) => {
+    return {
+        clearCart: () => dispatch(clearCart())
+    }
+}
 
 
 const mapStateToProps = state => {
@@ -65,4 +75,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps)(Cart);
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);

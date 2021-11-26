@@ -12,9 +12,9 @@ export default function SubCategories(category) {
         {items.map((categories) => (
         <div className='sC-item'>
 
-            <NextLink href ={`/categories/${categories.sub[0]}`}>
+            <a href ={`/categories/${categories.sub[0]}`}>
                 <a className="sC-item">{categories.sub[0]}</a>
-            </NextLink>
+            </a>
 
             <NextLink href ={`/categories/${categories.sub[1]}`}>
                 <a className="sC-item">{categories.sub[1]}</a>

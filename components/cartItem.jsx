@@ -1,8 +1,15 @@
 import React from 'react'
+import { connect } from 'react-redux';
+import { addToCart, clearCart, removeFromCart } from '../redux/Shopping/shopping-actions';
+
 
 const CartItem = ({items}) => {
-    
-    try{
+    console.log('items', items)
+
+    const cartClearHandler = () => {
+        onClearCart();
+    }
+
     return (
         <div className='shopping-cart'>
             <div className='cart-item'>
@@ -17,23 +24,27 @@ const CartItem = ({items}) => {
 
                 <div className='cart-description'>
                     <span className='cart-description-name'>{items.name}</span>
-                    <span className='cart-description-size'>Sizes</span>
+                    <span className='cart-description-size'>Size {items.size}</span>
                     <span className='cart-description-color'>Item Colour</span>
                 </div>
 
                 <div className='cart-quantity'>
                     <button className='plus-btn' type='button' >+</button>
                     <div className='item-number'>{items.qty}</div>
-                    <button className='minus-btn' type='button' >-</button>
+                    <button className='minus-btn' type='button' onClick={cartClearHandler}>-</button>
                 </div>
 
                 <div className='item-price'>£{items.price}</div>
 
             </div>
         </div>
-    )} catch(e){
-        console.log('error')
+    )
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onClearCart: () => dispatch(clearCart())
     }
 }
 
-export default CartItem;
+export default connect(mapDispatchToProps)(CartItem);

@@ -1,0 +1,59 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Off White Tee",
+            "slug": "top-1",
+            "category": "tops",
+            "sub": ["clothing"],
+            "image": "/images/top1.png",
+            "price": 25,
+            "description": "T-shirt",
+            "sizes": ["s","m","l"]
+            },
+            {
+                "id": 2,
+                "name": "Off White Tee",
+                "slug": "top-2",
+                "category": "tops",
+                "sub": ["clothing"],
+                "image": "/images/top1.png",
+                "price": 25,
+                "description": "T-shirt",
+                "sizes": ["s","m","l"]
+            },
+            {
+                "id": 3,
+                "name": "Off White Tee",
+                "slug": "top-3",
+                "category": "tops",
+                "sub": ["clothing"],
+                "image": "/images/top1.png",
+                "price": 25,
+                "description": "T-shirt",
+                "sizes": ["s","m","l"]
+            },
+            {
+                "id": 4,
+                "name": "Off White Tee",
+                "slug": "top-4",
+                "category": "tops",
+                "sub": ["clothing"],
+                "image": "/images/top1.png",
+                "price": 25,
+                "description": "T-shirt",
+                "sizes": ["s","m","l"]
+            },
+            {
+                "id": 5,
+                "name": "Off White Tee",
+                "slug": "top-5",
+                "category": "tops",
+                "sub": ["clothing"],
+                "image": "/images/top1.png",
+                "price": 25,
+                "description": "T-shirt",
+                "sizes": ["s","m","l"]
+                }
+    ]
+}

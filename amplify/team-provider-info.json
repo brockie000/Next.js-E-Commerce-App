@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nextcommerce-staging-110406-authRole",
+      "UnauthRoleArn": "arn:aws:iam::688738724997:role/amplify-nextcommerce-staging-110406-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::688738724997:role/amplify-nextcommerce-staging-110406-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-nextcommerce-staging-110406-deployment",
+      "UnauthRoleName": "amplify-nextcommerce-staging-110406-unauthRole",
+      "StackName": "amplify-nextcommerce-staging-110406",
+      "StackId": "arn:aws:cloudformation:eu-west-2:688738724997:stack/amplify-nextcommerce-staging-110406/9a4f1e40-3715-11ec-8c8e-0afb1e1a2e46",
+      "AmplifyAppId": "dnzkvdjzp3rbs"
+    }
+  }
+}

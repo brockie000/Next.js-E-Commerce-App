@@ -20,7 +20,7 @@ const data = {
             image: '/images/top1.png',
             price: 25,
             description: 'T-shirt',
-            sizes: ['s','m','l'],
+            sizes: ['xs','s','m','l'],
             },
             {
             id: 2,

@@ -6,11 +6,37 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import NextLink from 'next/link';
+import api from '../components/api/contacts'
 import data from '../utils/data';
 import Navbar from '../components/Navbar';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
 
 export default function Home() {
+
+  const [posts, setPosts] = useState([]);
+
+  /*const retrieveContacts = async () => {
+    const response = await api.get("/contacts");
+    return response.data;
+    console.log(response.data);
+  };*/
+  
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try{
+        const response = await api.get('/names');
+        setPosts(response.data);
+        console.log(posts)
+      }catch (err) {
+
+      }
+    };
+
+    fetchPosts()
+  }, [])
+
   return (
     <main className='LandingPage'>
       <Navbar/>
@@ -76,6 +102,7 @@ export default function Home() {
       <div className = 'newArrivalsContainer'>
         <div className = 'newArrivalsText'>
           New Arrivals
+          {posts.id}
         </div>
       </div>
 

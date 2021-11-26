@@ -28,36 +28,36 @@ const Navbar = ({totalItems, cart}) => {
             </NextLink>
             
                 <ul className='nav-menu'>
-                    <NextLink href={`/categories/new`} passHref>
+                    <a href={`/categories/new`} passHref>
                     <li className='nav-item'>
                         <a className='nav-link' href={`/categories/new`}>New In</a>
                     </li>
-                    </NextLink>
-                    <NextLink href={`/categories/clothing`}>
+                    </a>
+                    <a href={`/categories/clothing`}>
                     <li className='nav-item'>
                         <a href='/categories/clothing' className='nav-link'>Clothing</a>
                     </li>
-                    </NextLink>
-                    <NextLink href={`/categories/tops`}>
+                    </a>
+                    <a href={`/categories/tops`}>
                     <li className='nav-item'>
                         <a href='/categories/tops' className='nav-link'>Tops</a>
                     </li>
-                    </NextLink>
-                    <NextLink href={`/categories/dresses`}>
+                    </a>
+                    <a href={`/categories/dresses`}>
                     <li className='nav-item'>
                         <a href='/categories/dresses' className='nav-link'>Dresses</a>
                     </li>
-                    </NextLink>
-                    <NextLink href={`/categories/accessories`}>
+                    </a>
+                    <a href={`/categories/accessories`}>
                     <li className='nav-item'>
                         <a href='/categories/accessories' className='nav-link'>Accessories</a>
                     </li>
-                    </NextLink>
-                    <NextLink href={`/categories/sale`}>
+                    </a>
+                    <a href={`/categories/sale`}>
                     <li className='nav-item'>
                         <a href='/categories/sale' className='nav-link'>Sale</a>
                     </li>
-                    </NextLink>
+                    </a>
                     
                     <NextLink href='/Cart/cart'>
                     <IconButton aria-label='Show cart items' color='inherit'>
