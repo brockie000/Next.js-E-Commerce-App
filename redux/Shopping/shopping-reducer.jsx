@@ -1,11 +1,13 @@
 import * as actionTypes from './shopping-types';
 import data from '../../utils/data';
-import { useState } from 'react';
+import { DataStore } from 'aws-amplify';
+import { Products } from '../../src/models';
+import { useEffect, useState } from 'react';
 
-//const test = []
+
 
 const INITIAL_STATE = {
-    products: data.products,
+    products: DataStore.query(Products),
     cart: [],
     currentItem: null,
 };
@@ -15,15 +17,14 @@ const INITIAL_STATE = {
 const shopReducer = (state = INITIAL_STATE, action) => {
     switch(action.type) {
         case actionTypes.ADD_TO_CART:
-            const item = state.products.find((product) => product.id === action.payload.id)
-            const inCart = state.cart.find((item) => item.id === action.payload.id ? true : false);
+            const inCart = state.cart.find((item) => item.name === action.payload.name ? true : false);
             return {
                 ...state,
                 cart: inCart ? state.cart.map((item) => 
-                    item.id === action.payload.id
-                     ? {...item, qty: item.qty + 1, price: item.price + item.price} 
+                    item.name === action.payload.name
+                     ? {...item, qty: item.qty + 1, price: item.price + action.payload.price} 
                      : item)
-                      : [...state.cart, {...item, qty: 1, size: action.payload.size}],
+                    :[...state.cart, {name: action.payload.name, image:action.payload.image, price: action.payload.price, qty: 1, size: action.payload.size}],
             };
         case actionTypes.REMOVE_FROM_CART:
             return{

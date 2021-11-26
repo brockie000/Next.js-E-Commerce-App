@@ -53,7 +53,7 @@ const Product = ({product, addToCart}) => {
                     
                 
                 <div>
-                    <IconButton onClick={() => addToCart(product.id, size)}>
+                    <IconButton onClick={() => addToCart(product, size)}>
                         <AddShoppingCart/>
                     </IconButton>
                 </div>
@@ -69,7 +69,7 @@ const mapDispatchToProps = (dispatch) => {
     localStorage.setItem('checked', 0)
     localStorage.setItem('size', null)
     return {
-        addToCart: (id, size) => dispatch(addToCart(id, size))
+        addToCart: (product, size) => dispatch(addToCart(product, size))
     }
 }
 

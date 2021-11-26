@@ -15,15 +15,16 @@ export default function Tops() {
     const [filter, setFilter] = useState()
     const router = useRouter();
     const { category } = router.query;
+    console.log(category)
 
     useEffect(() => {
         const fetchItems = async () => {
-          const items = await DataStore.query(Products)
+          const items = (await DataStore.query(Products)).filter(product => product.categories.includes(category))
           console.log(items)
           setItem(items)
         };
         fetchItems();
-      }, []);
+      }, [category]);
 
     
     /*if(filter === 'Off White Tee'){
