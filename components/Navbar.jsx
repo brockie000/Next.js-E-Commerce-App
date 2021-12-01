@@ -2,6 +2,7 @@
 import React, {useState, useEffect} from 'react'
 import { Badge, IconButton } from '@material-ui/core'
 import { ShoppingCart } from '@material-ui/icons'
+//import SearchIcon from '@mui/icons-material/Search';
 import NextLink from 'next/link';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core';
@@ -59,6 +60,7 @@ const Navbar = ({totalItems, cart}) => {
                     </li>
                     </a>
                     
+                    
                     <NextLink href='/Cart/cart'>
                     <IconButton aria-label='Show cart items' color='inherit'>
                         <Badge badgeContent={cartCount} color='secondary'>
@@ -66,9 +68,9 @@ const Navbar = ({totalItems, cart}) => {
                         </Badge>
                     </IconButton>
                     </NextLink>
-                    
-                    
-                </ul>
+
+                    </ul>
+                
             </div>
             
         </header>

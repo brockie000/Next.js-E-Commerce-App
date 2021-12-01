@@ -17,11 +17,11 @@ const INITIAL_STATE = {
 const shopReducer = (state = INITIAL_STATE, action) => {
     switch(action.type) {
         case actionTypes.ADD_TO_CART:
-            const inCart = state.cart.find((item) => item.name === action.payload.name ? true : false);
+            const inCart = state.cart.find((item) => item.name === action.payload.name && item.size === action.payload.size ? true : false);
             return {
                 ...state,
                 cart: inCart ? state.cart.map((item) => 
-                    item.name === action.payload.name
+                    item.name === action.payload.name && item.size === action.payload.size
                      ? {...item, qty: item.qty + 1, price: item.price + action.payload.price} 
                      : item)
                     :[...state.cart, {name: action.payload.name, image:action.payload.image, price: action.payload.price, qty: 1, size: action.payload.size}],

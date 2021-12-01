@@ -1,11 +1,29 @@
+type OrderedItems @model @auth(rules: [{allow: public}]) @key(name: "byOrders", fields: ["ordersID"]) {
+  id: ID!
+  name: String
+  size: String
+  price: Int
+  quantity: Int
+  ordersID: ID
+}
+
+type Orders @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  items: Int
+  price: Int
+  ordered: Boolean
+  OrderedItems: [OrderedItems] @connection(keyName: "byOrders", fields: ["id"])
+}
+
 type Products @model @auth(rules: [{allow: public}]) {
   id: ID!
   name: String
   slug: String
   categories: [String]
-  image: String
+  image: [String]
   price: Int
   description: String
   sizes: [String]
+  colours: [String]
 }
  

@@ -81,13 +81,14 @@ li {
 
   .landingPageImage{
     width: 100%;
+    height: 600px;
   }
   .landingBoxText{
     position: relative;
     bottom: 50%;
     text-align: center;
     font-size: 30px;
-    color: gray;
+    color: white;
     text-decoration: underline;
     cursor: pointer;
   }
@@ -222,6 +223,45 @@ li {
     justify-content: center;
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  /*************************Product Page*****************/
+  .productPageMain{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 7%;
+    padding-right: 100px;
+  }
+
+  .product-left{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+  }
+
+  .mainImage{
+    width: 180%;
+  }
+
+  .main-image{
+    width: 100%;
+  }
+
+  .sideImages{
+    display: flex;
+    width: 110%;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .miniImage{
+    width: 100%;
+  }
+
+  .product-right{
+    background-color: palegreen;
+    width: 40%;
+    
   }
 
   /*************************Cart Page*********************/
